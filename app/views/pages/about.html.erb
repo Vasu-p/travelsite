@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="col-md-9">
+   <img src="2.jpg" class="img-rounded" alt="Cinque Terre" width="750" height="300">
+  </div>
+<div class="col-md-3">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#">Home</a></li>
+        <%if trip_signed_in? %>
+        <% if !current_trip.journey %>
+        <li><%= link_to "Create trip",new_journey_path %></li>
+        <%end%>
+        <% if current_trip.journey %>
+        <li><%= link_to "Show trip",journeys_path %></li>
+        <%end%>
+        <%end%>
+        <li><%= link_to "About Us",about_path %></li>
+        <li><%= link_to "Contact Us",contact_path %></li>
+      </ul>
+    </div>
+ <div class="row">
+</div>
+  <div class="row">
+    <div class="col-md-3">
+      <p>You can make a booking online through our website and complete your transaction using a variety of secure payment options that are available. If you would like to make a booking/enquiry on the phone, please contact our 24x7 Customer Support service.</p>
+    </div>
+    <div class="col-md-3"> 
+      <p>You can make a booking online through our website and complete your transaction using a variety of secure payment options that are available. If you would like to make a booking/enquiry on the phone, please contact our 24x7 Customer Support service.</p>
+    </div>
+    <div class="col-md-3"> 
+      <p>You can make a booking online through our website and complete your transaction using a variety of secure payment options that are available. If you would like to make a booking/enquiry on the phone, please contact our 24x7 Customer Support service.</p>
+    </div>
+    
+    <div class="clearfix visible-lg"></div>
+  </div>
+</div>

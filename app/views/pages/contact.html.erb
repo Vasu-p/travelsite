@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="col-md-9">
+   <center><img src="4.jpg" class="img-rounded" alt="Cinque Terre" width="400" height="300"></center>
+  </div>
+<div class="col-md-3">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#">Home</a></li>
+        <%if trip_signed_in? %>
+        <% if !current_trip.journey %>
+        <li><%= link_to "Create trip",new_journey_path %></li>
+        <%end%>
+        <% if current_trip.journey %>
+        <li><%= link_to "Show trip",journeys_path %></li>
+        <%end%>
+        <%end%>
+        <li><%= link_to "About Us",about_path %></li>
+        <li><%= link_to "Contact Us",contact_path %></li>
+      </ul>
+    </div>
+ <div class="row">
+</div>
+  <div class="row">
+    <div class="col-md-3">
+      <p>Surat (Head Office)</p><p>
+	MakeYourTrip India Pvt. Ltd.,</p><p> 
+	Lal Tower A, SP Infocity</p><p>
+	243, Udyog Vihar, Phase 1</p><p>
+	Surat,Gujarat - 122016, India</p>
+    </div>
+    <div class="col-md-3"> 
+      <p></p>
+    </div>
+    <div class="col-md-3"> 
+      <p>TOLL FREE:</p><p>
+	1-800-11 8747 - From MTNL/BSNL phones</p><p> 
+	1-800-102 8747 - All other major operators</p>
+    </div>
+    
+    <div class="clearfix visible-lg"></div>
+  </div>
+</div>

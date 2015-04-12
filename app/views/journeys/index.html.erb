@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Your Journey</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>From</th>
+      <th>To</th>
+      <th>Budget</th>
+      <th>By</th>
+      <th>Peoples</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @journeys.each do |journey| %>
+      <tr>
+        <td><%= journey.from %></td>
+        <td><%= journey.to %></td>
+        <td><%= journey.budget %></td>
+        <td><%= journey.by %></td>
+        <td><%= journey.peoples %></td>
+        <td><%= journey.name %></td>
+        <td><%= link_to 'Show', journey %></td>
+        
+        <td><%= link_to 'Destroy', journey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<div class="link">
+<center><%= link_to "Add Costs",new_cost_path %></center></div>
+<div class="link"><center><%= link_to "Show Costs",costs_path %></center></div>

@@ -1,0 +1,30 @@
+
+  
+<div class="container">
+  <div class="col-md-9">
+   <img src="1.jpg" class="img-rounded" alt="Cinque Terre" width="750" height="300">
+  </div>
+<div class="col-md-3">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#">Home</a></li>
+        <%if trip_signed_in? %>
+        <% if !current_trip.journey %>
+        <li><%= link_to "Create trip",new_journey_path %></li>
+        <%end%>
+        <% if current_trip.journey %>
+        <li><%= link_to "Show trip",journeys_path %></li>
+        <%end%>
+        <%end%>
+        <li><%= link_to "About Us",about_path %></li>
+        <li><%= link_to "Contact Us",contact_path %></li>
+      </ul>
+    </div>
+ <div class="row">
+</div>
+  <div class="row">
+  	<div class="col-md-8">
+    We help you Calculate the expenses when you go out with your friends and Any one or more pays total amount for whole group.This Help you manage the expenses and at end gives a summery of <b>who</b> need to give <b>whom</b> how much sum of <b>Money</b>.
+</div></div>
+
+</body>
+</html>

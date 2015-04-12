@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1> Costs</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Person</th>
+      <th>Description</th>
+      <th>Amount</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+ 
+  <tbody>
+    <% @costs.each do |cost| %>
+      <tr>
+        <td><%= cost.person %></td>
+        <td><%= cost.description %></td>
+        <td><%= cost.amount %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<h1 class="label label-default">Budget Remaining</h2>
+<h3 class="label label-success"><%= @rem_budget %></h3>
+<br><br>
+<%= link_to "Back",journeys_path %>
+<br>
+

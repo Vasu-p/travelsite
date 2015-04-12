@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>From:</strong>
+  <%= @journey.from %>
+</p>
+
+<p>
+  <strong>To:</strong>
+  <%= @journey.to %>
+</p>
+
+<p>
+  <strong>Budget:</strong>
+  <%= @journey.budget %>
+</p>
+
+<p>
+  <strong>By:</strong>
+  <%= @journey.by %>
+</p>
+
+<p>
+  <strong>Peoples:</strong>
+  <%= @journey.peoples %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @journey.name %>
+</p>
+
+<%= link_to 'Edit', edit_journey_path(@journey) %> |
+<%= link_to 'Back', journeys_path %>
+
